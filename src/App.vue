@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
+  <v-app>
+    <v-main>
+      <nav>
+        <router-link to="/">Home</router-link>
+      <!-- <router-link to="/date-picker">Date Picker</router-link> -->
+      <router-link to="/charts-view">Charts</router-link>
+      </nav>     
+      <router-view/>
+    </v-main>
+  </v-app>
+</template>     
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Vue from 'vue';
+import {ChartPlugin} from "@syncfusion/ej2-vue-charts"
 
+Vue.use(ChartPlugin)
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
+  data: () => ({
+    //
+  }),
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+nav{
+  margin-left:250px;
+  margin-top:35px;
+  text-decoration: none;
+  cursor:pointer;
+  font-size:20px;
+  font-weight: 500;
+  margin-right:570px; 
+ display: flex;
+ justify-content: space-evenly;
+ 
+ /* justify-content:space-evenly; */
 }
 </style>
