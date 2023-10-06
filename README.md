@@ -1,4 +1,7 @@
 # task-1-vuejs
+"This is my first task in this repository:
+1. Date Picker 
+2. Charts component"
 
 ## Project setup
 ```
