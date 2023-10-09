@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h3>Finance chart in vuejs</h3>
        <ejs-chart :primaryXAxis="chartPrimaryAxis" :title="chartTitle" :primaryYAxis="chartPrimaryYAxis" :tooltip="chartTooltip" :crosshair="chartCrosshairSettings">
         <e-series-collection>
             <e-series type="Hilo" :dataSource="stockData" xName="date" high="highValue" low="lowValue" open="openValue" close="closeValue" volume="CandleSeries">
